@@ -12,4 +12,5 @@ class LoginViewModel : ViewModel() {
         loginStatus.value = true
         return loginStatus
     }
+
 }

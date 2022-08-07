@@ -9,5 +9,4 @@ class MainViewModelFactory@Inject constructor(private val repository: ProductRep
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return LoginViewModel(repository) as T
     }
-
 }

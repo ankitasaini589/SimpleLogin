@@ -9,10 +9,11 @@ import com.ankita.testapp.repository.ProductRepository
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.io.Serializable
 import javax.inject.Inject
 
 class LoginViewModel @Inject constructor(private val productRepository: ProductRepository) :
-    ViewModel() {
+    ViewModel(){
 
     val _loginStatus: LiveData<List<Product>>
         get() = productRepository.products
@@ -23,4 +24,7 @@ class LoginViewModel @Inject constructor(private val productRepository: ProductR
         }
     }
 
+    override fun onCleared() {
+        super.onCleared()
+    }
 }

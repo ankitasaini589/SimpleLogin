@@ -23,7 +23,5 @@ class ProductRepository  @Inject constructor(private val fakerAPI: FakerAPI){
                 _products.postValue(result.body())
             }
         }
-
     }
-
 }
